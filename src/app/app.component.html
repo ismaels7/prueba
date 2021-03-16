@@ -1,3 +1,20 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+ <!--<ion-router-outlet></ion-router-outlet>-->
+  <ion-spli-pane>
+    <ion-menu  side="start" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>MY APP</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-item>
+          <ion-label>Modo Oscuro</ion-label>
+          <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
+        </ion-item>
+        <!--AQUI VA EL MENU-->
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-spli-pane>
 </ion-app>
